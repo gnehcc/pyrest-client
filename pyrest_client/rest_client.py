@@ -4,16 +4,19 @@ import requests
 
 
 """
-A simple rest client based on requests which gives users a way calling restful api in a chaining way.
+A simple rest client based on requests which gives users a way calling restful api in a chaining mode.
 """
 
-__doc__ = 'A simple rest client based on requests which gives users a way calling restful api in a chaining way.'
+__doc__ = 'A simple rest client based on requests which gives users a way calling restful api in a chaining mode.'
 
 
 METHODS = ['get', 'head', 'post', 'patch', 'put', 'delete', 'options']
 
 
 class _Executable(object):
+    """
+    Place where calls actually execute.
+    """
     def __init__(self, method, path):
         self._method = method
         self._path = path
@@ -32,6 +35,9 @@ class _Executable(object):
 
 
 class _Callable(object):
+    """
+    Class for generating url in a chaining mode
+    """
     def __init__(self, path):
         self._path = path
 
@@ -52,6 +58,9 @@ class _Callable(object):
 
 
 class RestClient(object):
+    """
+    Entry point to start a call: RestClient('root_url').xxx.xxx.get(...)
+    """
     def __init__(self, root_url=None):
         self._root_url = root_url
 
