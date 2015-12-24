@@ -66,6 +66,6 @@ class RestClient(object):
 
     def __getattr__(self, item):
         if '__' in item:
-            return getattr(self.get, item)
+            return super(RestClient, self).__getattr__(item)
 
         return _Callable('%s/%s' % (self._root_url, item))
