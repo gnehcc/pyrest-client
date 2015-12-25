@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
         name='pyrest-client',
-        version='0.1',
+        version='0.1.1',
         description='A simple rest client based on requests',
         long_description=open('README.md', 'r').read(),
         license='Apache Software License',
