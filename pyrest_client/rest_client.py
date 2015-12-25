@@ -8,7 +8,6 @@ A simple rest client based on requests which gives users a way calling restful a
 """
 
 __doc__ = 'A simple rest client based on requests which gives users a way calling restful api in a chaining mode.'
-__version__ = 0.1
 
 
 METHODS = ['get', 'head', 'post', 'patch', 'put', 'delete', 'options']
